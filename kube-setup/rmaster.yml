@@ -10,6 +10,6 @@ spec:
     - name: rmaster
       image: "trcook/rdockerhpc_master"
       # command: ["R","--no-save"]
-      command: ["sleep", "1200"]
+      command: ["sleep", "12000"]
 
 
