@@ -5,5 +5,3 @@ require(doRedis)
 try(registerDoRedis(host='redis', queue='jobs'),silent=T)
 registerDoRedis(host='redis', queue='jobs')
 }
-
-

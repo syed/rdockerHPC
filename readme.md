@@ -133,7 +133,7 @@ This is not trivial as it potentially lets you set up an army of eager workers i
 To Scale, using kubernetes, we just run: 
 
 ```{bash}
-./kubernetes/cluster/kubectl.sh scale --replicas=3 rc/rworker-rc
+./kubernetes/cluster/kubectl.sh scale --replicas=3 deploy/rworker-rc
 ```
 
 where this will create 3 new workers, running under the rworker-rc. Since the rworker-rc is built to query the redis service, we don't need to worry about setting it up as a service or accessing it externally. Instead, rworker-rc replicas (i.e. pods controlled and provisioned by rworker-rc) will signup with the redis service and have exclusive communication with it. 
